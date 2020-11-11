@@ -1,0 +1,4 @@
+recursive-include quilter *.csv
+recursive-include quilter *.docx
+recursive-include quilter *.py
+recursive-include quilter *.zip
