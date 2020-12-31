@@ -3,6 +3,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import io
 from PIL import Image
+import seaborn as sns
 
 
 def __add__(self, o):
@@ -18,6 +19,8 @@ def __add__(self, o):
     # loop through each figure and save figure to the image buffer, then reload
     # from buffer and save to the im list as a image object
     for f in figs:
+        if isinstance(f, sns.FacetGrid):
+            f = f.fig
         buf = io.BytesIO()
         f.savefig(buf, format="png", bbox_inches="tight", pad_inches=0.02, dpi=400)
         buf.seek(0)
@@ -60,6 +63,8 @@ def __truediv__(self, o):
     # loop through each figure and save figure to the image buffer, then reload
     # from buffer and save to the im list as a image object
     for f in figs:
+        if isinstance(f, sns.FacetGrid):
+            f = f.fig
         buf = io.BytesIO()
         f.savefig(buf, format="png", bbox_inches="tight", pad_inches=0.02, dpi=400)
         buf.seek(0)
