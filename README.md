@@ -3,7 +3,7 @@
 
 This package overloads/creates operators for the matplotlib Figure class so that you can add and divide figures together into a new figure with subplots. 
 
-Adding two figures together creates a new figure with the original figures side=by-side as subplots. Dividing will stack the figured on top of each other. 
+Adding two figures together creates a new figure with the original figures side-by-side as subplots. Dividing will stack the figured on top of each other. 
 
 Currently the package converts the input figures to images before reloading the images into the axes objects of the output figure. If anyone has a better way to copy actual axes objects to a new figure I'd loved help.
 
