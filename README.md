@@ -19,7 +19,6 @@ ax1.set_title("test")
 ax1.legend()
 
 fig2, ax2 = plt.subplots(figsize=(5,3))
-#plt.figure()
 ax2.plot([2, 2])
 ax2.set_title("test 2")
 ```
